@@ -13,10 +13,7 @@ var title="";
 var content="";
 
 
-/*
-TODO:
-Upload to github?
-*/
+
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
   });
@@ -31,11 +28,12 @@ app.post("/create",(req, res) => {
 
 app.post("/blogs", (req,res) =>{
     
-    console.log(blogs);
+
     blogs.set(req.body.title, req.body.textContent);
     it=blogs.keys();
     title=req.body.title;
     content=req.body.textContent;
+
     res.render("blogs.ejs",{blogs, it});
 });
 
