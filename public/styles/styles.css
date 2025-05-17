@@ -17,9 +17,14 @@
     } }
 .home{
     width:50%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    overflow-y: auto;
     height: 100vh;
     margin-left:25%;
     background-color:whitesmoke;
+
    
 }
 
