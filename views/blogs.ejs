@@ -18,13 +18,18 @@
                 </div>
             </form>
             <hr/>
+                <a class="fs-4" style="color: #b7950b;">Hello Everyone!</a>
+                <p class="fs-5">This is Revanth, welcome to revblogs where you can say anything you want! No slurs or anything offensive please. Please
+                introduce yourselves and be friendly with each other.
+                </p>
+                <hr/>
                 <% if(blogs.size==0) { %>
-                     <h4 class="pt-3 ">You have no posts!</h4>
+                     <h4 class="pt-3 ">There are no posts!</h4>
                 <% } else { %>
                     <% for(var i=0;i<blogs.size;i++) { %>
                         <% const val=it.next().value; %>
                         <a class="fs-4"href="/view?source=<%=val%>" method="GET" style="color: #b7950b;"><%= val %></a>
-                        <p style="width: 500px;" class="fs-5"><%- blogs.get(val) %></p>
+                        <p class="fs-5"><%- blogs.get(val) %></p>
                         <hr/>
                         <% } %>
                 <% } %>
