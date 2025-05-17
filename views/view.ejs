@@ -13,7 +13,7 @@
     <div class="home my-4" style="border-radius:2%">
         <div class="hContent pt-3">
             <div class="container"></div>
-                <h2 class="text-body-emphasis"> <%=title %></h2>
+                <h2 class="text-body-emphasis"> <%=title %> (by <%=name%>)</h2>
                 <h5><%= content %></h5>
                 <form action="/blogs" method="GET">
                     <button type="submit" name="action" class="btn btn-outline-success mt-3" value="back">Go to Your Blogs</button>
@@ -28,14 +28,3 @@
     </div>
 </body>
 </html>
-
-<!--<h2><%= title %></h2>
-  <h4><%= content %></h4>
-    <form action="/blogs" method="GET">
-        <button type="submit" name="action" value="back">View All of Your Blogs</button>
-        <button type="submit" name="action" value="delete">Delete Post</button>
-    </form>
-    <form action="/edit" method="GET">
-        <button type="submit" name="action" value="edit">Edit Post</button>
-    </form>
-    -->
