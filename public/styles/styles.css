@@ -1,0 +1,20 @@
+.gradient-background {
+    background: linear-gradient(300deg, #093028, #237a57);
+        background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite; 
+}
+
+.home{
+    width:50%;
+    height: 100vh;
+    margin-left:25%;
+    background-color:whitesmoke;
+   
+}
+
+.hContent{
+    padding: 10px 25px 10px 25px;
+}
+
+
+
