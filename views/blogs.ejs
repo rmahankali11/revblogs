@@ -10,23 +10,24 @@
 </head>
 <body class="gradient-background">
     <div class = "home my-4" style="border-radius:2%">
+        
         <div class="hContent pt-3">
-            <h2>Your Blogs</h2>
-            <ul style="list-style-type:circle;">
+            <h1 class="col-6">Your Blogs</h1>
+            <form action="/create" method="POST">
+                <div class="gap-2 col-6 pt-3"><button type="submit" class="btn btn-primary" type="button">Create a post</button>
+                </div>
+            </form>
+            <hr/>
                 <% if(blogs.size==0) { %>
                      <h4 class="pt-3 ">You have no posts!</h4>
                 <% } else { %>
                     <% for(var i=0;i<blogs.size;i++) { %>
                         <% const val=it.next().value; %>
-                        <li><a href="/view?source=<%=val%>" method="GET"><%= val %></a></li>
+                        <a class="fs-4"href="/view?source=<%=val%>" method="GET" style="color: #b7950b;"><%= val %></a>
+                        <p style="width: 500px;" class="fs-5"><%- blogs.get(val) %></p>
+                        <hr/>
                         <% } %>
                 <% } %>
-            </ul>
-            <form action="/create" method="POST">
-                <div class="gap-2 col-6 pt-3"><button type="submit" class="btn btn-primary"
-                        type="button">Create a post</button>
-                </div>
-            </form>
         </div>
     </div>
 
