@@ -18,9 +18,9 @@
                 </div>
             </form>
             <hr/>
-                <a class="fs-4" style="color: #b7950b;">Hello Everyone!</a>
+                <a class="fs-4" style="color: #b7950b; text-decoration:none">Hello Everyone!<span style="color:black;"> --Revanth</span></a>
                 <p class="fs-5">This is Revanth, welcome to revblogs where you can say anything you want! No slurs or anything offensive please. Please
-                introduce yourselves and be friendly with each other.
+                introduce yourselves and be friendly with each other. 
                 </p>
                 <hr/>
                 <% if(blogs.size==0) { %>
@@ -28,7 +28,7 @@
                 <% } else { %>
                     <% for(var i=0;i<blogs.size;i++) { %>
                         <% const val=it.next().value; %>
-                        <a class="fs-4"href="/view?source=<%=val%>" method="GET" style="color: #b7950b;"><%= val %></a>
+                        <a class="fs-4"href="/view?source=<%=val%>" method="GET" style="color: #b7950b; text-decoration:none;"><%= val %><span style="color:black;"> --<%-names.get(val)%></span></a>
                         <p class="fs-5"><%- blogs.get(val) %></p>
                         <hr/>
                         <% } %>
